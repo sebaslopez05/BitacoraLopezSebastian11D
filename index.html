@@ -3,76 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora Sebastián López</title>
-    <link rel="icon" type="image/png" href="c:\Users\Alumno Capouilliez\Documents\López11D\recursos\rojin.png">
-    <link rel="stylesheet" href="style.css">
-
+    <title>Bitácora Tecnología - Sebastián López</title>
+    <link rel="icon" type="imagen/png" href="recursos/img/LGCapouilliez.png">
     <style>
-        /*CSS-Diseño, configurar en cascada(Esto si es un lenguaje de progra)*/
-        html, body{
+        html, body {
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        body{
+        
+        body {
             display: flex;
             flex-direction: column;
             text-align: center;
-            color: rgb();
-            
         }
-        header{
+
+        /* Título con animación de neón cambiante */
+        h1 {
+            color: white; /* Texto blanco para que resalte el neón */
+            font-size: 2.5em;
+            margin: 0;
+            animation: neonChanger 8s linear infinite; /* Animación continua de 8 segundos */
+        }
+
+        /* Definición de la animación de colores para el neón */
+        @keyframes neonChanger {
+            0%, 100% {
+                text-shadow:
+                    0 0 5px #bc13fe,
+                    0 0 10px #bc13fe,
+                    0 0 20px #bc13fe,
+                    0 0 40px #bc13fe;
+            }
+            25% {
+                text-shadow:
+                    0 0 5px #ff007f,
+                    0 0 10px #ff007f,
+                    0 0 20px #ff007f,
+                    0 0 40px #ff007f;
+            }
+            50% {
+                text-shadow:
+                    0 0 5px #00d2ff,
+                    0 0 10px #00d2ff,
+                    0 0 20px #00d2ff,
+                    0 0 40px #00d2ff;
+            }
+            75% {
+                text-shadow:
+                    0 0 5px #00ff66,
+                    0 0 10px #00ff66,
+                    0 0 20px #00ff66,
+                    0 0 40px #00ff66;
+            }
+        }
+
+        header {
             padding: 20px;
-            background-color: rgb(207, 111, 48);
+            background-color: orange;
         }
-        main{
+
+        main {
             flex: 1;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            background-color: rgb(203, 184, 154);
         }
-        footer{
+
+        /* Efecto zoom en el logo */
+        footer img {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        footer img:hover {
+            transform: scale(1.2);
+        }
+
+        footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 50px;
-            border-top: 1px solid rgb(163, 86, 35);
-            background-color: rgb(172, 150, 82);
+            border-top: 1px solid black;
+            background-color: rgb(251, 192, 251);
+        }
+
+        @media(max-width:600px){
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+        }
+
+        .semana {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eee;
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .semana:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .semana h2 {
+            margin-top: 0;
+            color: #bc13fe;
+            border-bottom: 2px solid pink;
+            display: inline-block;
+        }
+
+        .contenedor-pdf {
+            width: 100%;
+            height: 900px;
+            border: 2px solid pink;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 15px;
+            display: block;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Bitacora Segunda y Tercera unidad</h1>
+        <h1>Encabezado de página web</h1>
     </header>
+
     <main>
-        <h4> Contenido de la pagina WEB</h4>
         <div class="semana">
-        <h2>Semana 1: Introducción a Arduino</h2>
-        <p>Consulta todos los detalles del tema visto en la hoja interactiva a continuación:</p>
-        
-        <div class="contenedor-pdf">
-            <embed src="c:\Users\Alumno Capouilliez\Downloads\Guia 1 - Sebastian Lopez.pdf" 
-                type="application/pdf" 
-                width="100%" 
-                height="600px" />
+            <h2>Semana 1: Introducción</h2>
+            <p>Hoy aprendimos sobre la estructura básica de HTML y cómo personalizar el entorno de Visual Studio Code.</p>
+            
+            <iframe 
+                src="recursos/IntroducciónArduino .pdf" 
+                class="contenedor-pdf"
+                type="application/pdf">
+            </iframe>
+
+            <p style="font-size: 0.9em; margin-top: 10px;">
+                <a href="recursos/IntroducciónArduino .pdf" target="_blank" style="color: #bc13fe;">
+                    ¿No puedes ver el archivo? Haz clic aquí para descargarlo.
+                </a>
+            </p>
         </div>
-    </div>
 
-    <div class="semana">
-    <h2>Semana 2: Circuito 1</h2>
-    <p>Video del circuito realizado en Arduino:</p>
+        <div class="semana">
+            <h2>Semana 2: Simulación en Tinkercad</h2>
+            <p>En esta sesión realizamos una simulación de un semáforo RGB utilizando Arduino Uno. Programamos los pines digitales para alternar entre colores usando funciones de tiempo.</p>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
+                    <source src="recursos/videorobotcafinal.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
 
-    <video width="800" controls>
-        <source src="https://github.com/sebaslopez05/BitacoraLopezSebastian11D/blob/main/recursos/Circuito%201%20Sebasti%C3%A1n%20L%C3%B3pez.mp4" type="video/mp4">
-        Tu navegador no soporta videos.
-    </video>
-</div>
+        <div class="semana">
+            <h2>Semana 3: Práctica con LED RGB Físico</h2>
+            <p>Realizamos el montaje físico y la programación en placa de un LED RGB. Configuramos las salidas digitales de nuestro Arduino para alternar de manera continua entre los colores rojo, azul y verde mediante ciclos programados.</p>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
+                    <source src="recursos/Circuito semana 3 (1).mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+
+        <div class="semana">
+            <h2>Semana 4: Secuencia de Semáforo Automatizado</h2>
+            <p>Diseñamos un circuito de semáforo utilizando tres LEDs independientes (rojo, verde y amarillo) conectados a pines digitales separados. Estructuramos la lógica del código para replicar una secuencia vial controlando los tiempos exactos de encendido.</p>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
+                    <source src="recursos/Circuito Semana 4 (1).mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+
+        <div class="semana">
+            <h2>Semana 5: Montaje Físico de Semáforo con LEDs Individuales</h2>
+            <p>Pasamos a otra práctica real, implementando el circuito físico del semáforo automatizado en el protoboard. Conectamos tres diodos LED independientes (verde, amarillo y rojo) con sus respectivas resistencias para protegerlos, enlazándolos a las salidas digitales del Arduino Uno. Logramos comprobar físicamente la correcta ejecución del código y la transición cíclica de los tiempos de iluminación viales.</p>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
+                    <source src="recursos/CirSemaforo.mov" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+
+          <div class="semana">
+            <h2>Semana 6: Circuito en Tinkercad con Sensor</h2>
+            <p>Pasamos a una práctica en Tinkercad, implementando un circuito parecido a el de semáforo, con la diferencia de el uso de un sensor para detectar la distancia, utiliando variables de condición para encender las luces LED.</p>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
+                    <source src="recursos/CirS6.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+        <div class="semana">
+            <h2>Semana 7: Circuito en Tinkercad con Sensor de Movimiento</h2>
+            <p>Pasamos nuevamente a una práctica en Tinkercad, utilizando ahora un sensor PIR. Este sensor permite que al momento de detectar menos de 200, este enciende la LED roja y màs de 200 enciende la LED azul. </p>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
+                    <source src="recursos/CircuitoS7.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <span>@Seanlogs</span>
-        <img src="c:\Users\Alumno Capouilliez\Documents\López11D\recursos\rojin.png" height="75" width="75">
+        <span>2026 @annito</span>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="Logo Colegio" width="200" height="50">
     </footer>
+
 </body>
 </html>
