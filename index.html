@@ -20,42 +20,12 @@
 
         /* Título con animación de neón cambiante */
         h1 {
-            color: white; /* Texto blanco para que resalte el neón */
-            font-size: 2.5em;
+            color: white;
+            font-size: 2.8em;
             margin: 0;
-            animation: neonChanger 8s linear infinite; /* Animación continua de 8 segundos */
-        }
-
-        /* Definición de la animación de colores para el neón */
-        @keyframes neonChanger {
-            0%, 100% {
-                text-shadow:
-                    0 0 5px #bc13fe,
-                    0 0 10px #bc13fe,
-                    0 0 20px #bc13fe,
-                    0 0 40px #bc13fe;
-            }
-            25% {
-                text-shadow:
-                    0 0 5px #ff007f,
-                    0 0 10px #ff007f,
-                    0 0 20px #ff007f,
-                    0 0 40px #ff007f;
-            }
-            50% {
-                text-shadow:
-                    0 0 5px #00d2ff,
-                    0 0 10px #00d2ff,
-                    0 0 20px #00d2ff,
-                    0 0 40px #00d2ff;
-            }
-            75% {
-                text-shadow:
-                    0 0 5px #00ff66,
-                    0 0 10px #00ff66,
-                    0 0 20px #00ff66,
-                    0 0 40px #00ff66;
-            }
+            font-weight: 900;
+            letter-spacing: 1px;
+            font-family: Arial Black, Arial, sans-serif;
         }
 
         header {
@@ -141,7 +111,7 @@
     <main>
         <div class="semana">
             <h2>Semana 1: Introducción</h2>
-            <p>Hoy aprendimos sobre la estructura básica de HTML y cómo personalizar el entorno de Visual Studio Code.</p>
+            <p>En esta primera semana conocimos la estructura básica de HTML y aprendimos a configurar y personalizar el entorno de trabajo en Visual Studio Code para comenzar a desarrollar páginas web.</p>
             
             <iframe 
                 src="recursos/IntroducciónArduino .pdf" 
@@ -150,7 +120,7 @@
             </iframe>
 
             <p style="font-size: 0.9em; margin-top: 10px;">
-                <a href="recursos/IntroducciónArduino .pdf" target="_blank" style="color: #bc13fe;">
+                <a href="recursos/IntroducciónArduino .pdf" target="_blank" style="color: #000000;">
                     ¿No puedes ver el archivo? Haz clic aquí para descargarlo.
                 </a>
             </p>
@@ -158,7 +128,7 @@
 
         <div class="semana">
             <h2>Semana 2: Simulación en Tinkercad</h2>
-            <p>En esta sesión realizamos una simulación de un semáforo RGB utilizando Arduino Uno. Programamos los pines digitales para alternar entre colores usando funciones de tiempo.</p>
+            <p>Durante esta práctica elaboramos una simulación de un semáforo RGB en Tinkercad utilizando Arduino Uno. Programamos los pines digitales para controlar el cambio de colores mediante secuencias de tiempo establecidas en el código.</p>
             
             <div style="text-align: center; margin-top: 15px;">
                 <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
@@ -170,7 +140,7 @@
 
         <div class="semana">
             <h2>Semana 3: Práctica con LED RGB Físico</h2>
-            <p>Realizamos el montaje físico y la programación en placa de un LED RGB. Configuramos las salidas digitales de nuestro Arduino para alternar de manera continua entre los colores rojo, azul y verde mediante ciclos programados.</p>
+            <p>En esta actividad realizamos el montaje físico de un LED RGB y desarrollamos el programa para controlar sus colores desde la placa Arduino. Configuramos las salidas digitales para alternar continuamente entre rojo, azul y verde mediante ciclos automáticos.</p>
             
             <div style="text-align: center; margin-top: 15px;">
                 <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
@@ -182,7 +152,7 @@
 
         <div class="semana">
             <h2>Semana 4: Secuencia de Semáforo Automatizado</h2>
-            <p>Diseñamos un circuito de semáforo utilizando tres LEDs independientes (rojo, verde y amarillo) conectados a pines digitales separados. Estructuramos la lógica del código para replicar una secuencia vial controlando los tiempos exactos de encendido.</p>
+            <p>Construimos un circuito de semáforo empleando tres LEDs independientes: rojo, amarillo y verde. Además, organizamos la programación para controlar el orden y la duración de cada luz, simulando el funcionamiento de un semáforo real.</p>
             
             <div style="text-align: center; margin-top: 15px;">
                 <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
@@ -194,7 +164,7 @@
 
         <div class="semana">
             <h2>Semana 5: Montaje Físico de Semáforo con LEDs Individuales</h2>
-            <p>Pasamos a otra práctica real, implementando el circuito físico del semáforo automatizado en el protoboard. Conectamos tres diodos LED independientes (verde, amarillo y rojo) con sus respectivas resistencias para protegerlos, enlazándolos a las salidas digitales del Arduino Uno. Logramos comprobar físicamente la correcta ejecución del código y la transición cíclica de los tiempos de iluminación viales.</p>
+            <p>En esta práctica llevamos el proyecto del semáforo a un montaje físico sobre un protoboard. Conectamos los tres LEDs con sus respectivas resistencias y los enlazamos a los pines digitales del Arduino Uno, verificando el correcto funcionamiento de la secuencia programada.</p>
             
             <div style="text-align: center; margin-top: 15px;">
                 <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
@@ -206,7 +176,7 @@
 
           <div class="semana">
             <h2>Semana 6: Circuito en Tinkercad con Sensor</h2>
-            <p>Pasamos a una práctica en Tinkercad, implementando un circuito parecido a el de semáforo, con la diferencia de el uso de un sensor para detectar la distancia, utiliando variables de condición para encender las luces LED.</p>
+            <p>En esta sesión desarrollamos una simulación en Tinkercad de un circuito similar al semáforo, incorporando un sensor de distancia. Utilizamos estructuras condicionales para controlar el encendido de los LEDs según los valores detectados por el sensor.</p>
             
             <div style="text-align: center; margin-top: 15px;">
                 <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
@@ -217,7 +187,7 @@
         </div>
         <div class="semana">
             <h2>Semana 7: Circuito en Tinkercad con Sensor de Movimiento</h2>
-            <p>Pasamos nuevamente a una práctica en Tinkercad, utilizando ahora un sensor PIR. Este sensor permite que al momento de detectar menos de 200, este enciende la LED roja y màs de 200 enciende la LED azul. </p>
+            <p>En esta práctica utilizamos un sensor de movimiento PIR en Tinkercad. Programamos el circuito para que, cuando el valor detectado fuera menor a 200, se encendiera el LED rojo y, cuando fuera mayor a ese valor, se activara el LED azul. </p>
             
             <div style="text-align: center; margin-top: 15px;">
                 <video controls style="width: 100%; max-width: 800px; border-radius: 8px; border: 2px solid pink;">
@@ -229,7 +199,7 @@
     </main>
 
     <footer>
-        <span>2026 @annito</span>
+        <span>@Seanlogs</span>
         <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="Logo Colegio" width="200" height="50">
     </footer>
 
